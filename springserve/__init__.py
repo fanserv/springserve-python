@@ -1,6 +1,8 @@
 
 from __future__ import absolute_import
 
+import logging
+
 import six
 
 if six.PY3:
@@ -16,7 +18,7 @@ import getpass
 
 from requests_toolbelt import MultipartEncoder
 
-_msg = None
+_msg = logging.getLogger(__name__)
 
 try:
     from link import lnk as _lnk
